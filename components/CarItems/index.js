@@ -1,12 +1,16 @@
 import React from 'react'
-import { ImageBackground, Text, View } from 'react-native'
+import {ImageBackground, Text, View } from 'react-native'
 import StyledButton from '../StyledButton'
 import styles from './styles'
 
-const CartItem = ({ heading, subHeading, tailHeading, source }) => {
+const CartItem = (props) => {
+
+const { heading, subHeading, tailHeading, image }= props.car
+
+
     return (
         <View style={styles.carModalContainer}>
-            <ImageBackground source={source} style={styles.image} />
+            <ImageBackground source={image} style={styles.image} />
             <View style={styles.titles}>
                 <Text style={styles.heading}>{heading}</Text>
                 <Text style={styles.subHeading}>{subHeading}
@@ -15,10 +19,10 @@ const CartItem = ({ heading, subHeading, tailHeading, source }) => {
             </View>
             <View style={styles.buttonContainer}>
                 <StyledButton buttonText={'CUSTOM ORDER'} type={'primary'} onPress={() => {
-                    console.warn('btn pressde')
+                    console.warn('btn pressed')
                 }} />
                 <StyledButton buttonText={'EXISTING INVENTORY'} type={'secondary'} onPress={() => {
-                    console.warn('btn pressde')
+                    console.warn('btn pressed')
                 }} />
             </View>
         </View>
