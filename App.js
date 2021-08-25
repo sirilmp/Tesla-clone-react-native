@@ -7,7 +7,8 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-     <CartItem/>
+     <CartItem heading={'Model S'} subHeading={'Order Online for'} tailHeading={'Touchless Delivery'} source={require('./assets/images/ModelS.jpeg')}/>
+     
 
       <StatusBar style="auto" />
     </View>
