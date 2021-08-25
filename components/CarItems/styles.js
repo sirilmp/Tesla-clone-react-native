@@ -3,7 +3,7 @@ import { Dimensions, StatusBar, StyleSheet } from "react-native"
 const style = StyleSheet.create({
     carModalContainer: {
         width: "100%",
-        height: Dimensions.get('window').height-StatusBar.currentHeight,
+        height: Dimensions.get('window').height,
     },
     image: {
         width: "100%",
